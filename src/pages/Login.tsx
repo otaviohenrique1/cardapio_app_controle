@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { Col, Container, Row, ButtonGroup, Card, CardBody, CardHeader, CardFooter } from "reactstrap";
+import { Container, Row, ButtonGroup, Card, CardBody, CardHeader, CardFooter } from "reactstrap";
 import { Form, Formik } from "formik";
-import { Titulo } from "../../components/Titulo";
-import { CampoInput, CampoInputProps } from "../../components/Campos/CampoInput";
-import { Botao } from "../../components/Botoes/Botao";
-import { BotaoLink } from "../../components/Botoes/BotaoLink";
-import { ModalErroCadastro } from "../../components/Modals";
-import { ApiBuscaLoginAdministrador } from "../../utils/api";
-import { FormatadorCrypto } from "../../utils/utils";
-import { dadosIniciaisFormularioLogin } from "../../utils/constantes";
-import { schemaValidacaoFormularioLogin } from "../../utils/ValidacaoSchemas";
+import { Titulo } from "../components/Titulo";
+import { CampoInput, CampoInputProps } from "../components/Campos/CampoInput";
+import { Botao } from "../components/Botoes/Botao";
+import { BotaoLink } from "../components/Botoes/BotaoLink";
+import { ModalErroCadastro } from "../components/Modals";
+import { ApiBuscaLoginAdministrador } from "../utils/api";
+import { FormatadorCrypto } from "../utils/utils";
+import { dadosIniciaisFormularioLogin } from "../utils/constantes";
+import { schemaValidacaoFormularioLogin } from "../utils/ValidacaoSchemas";
+import { Flex } from "../components/Containers/Flex";
 
 export function Login() {
   let navigate = useNavigate();
@@ -69,34 +70,46 @@ export function Login() {
             <Form>
               <Card>
                 <CardHeader>
-                  <Row>
-                    <Col md={12} className="d-flex justify-content-center align-items-center">
-                      <Titulo tag="h1">Login</Titulo>
-                    </Col>
-                  </Row>
+                  <Flex
+                    justifyContent="center"
+                    alignItems="center"
+                    width="100%"
+                  >
+                    <Titulo tag="h1">Login</Titulo>
+                  </Flex>
                 </CardHeader>
                 <CardBody>
                   <Row>
                     {lista_campos_dados.map((item, index) => {
                       const { md, id, label, name, type, placeholder, value, error, touched } = item;
                       return (
-                        <CampoInput key={index} md={md} id={id} label={label} name={name} type={type}
-                          placeholder={placeholder} value={value} error={error} touched={touched}
+                        <CampoInput
+                          key={index}
+                          md={md}
+                          id={id}
+                          label={label}
+                          name={name}
+                          type={type}
+                          placeholder={placeholder}
+                          value={value}
+                          error={error}
+                          touched={touched}
                         />
                       );
                     })}
                   </Row>
                 </CardBody>
                 <CardFooter>
-                  <Row>
-                    <Col md={12} className="w-100 d-flex justify-content-end">
-                      <ButtonGroup>
-                        <Botao color="primary" type="submit">Entrar</Botao>
-                        <Botao color="danger" type="reset">Limpar</Botao>
-                        <BotaoLink to="/administrador/cadastro" color="success">Novo usuario</BotaoLink>
-                      </ButtonGroup>
-                    </Col>
-                  </Row>
+                  <Flex
+                    width="100%"
+                    justifyContent="center"
+                  >
+                    <ButtonGroup>
+                      <Botao color="primary" type="submit">Entrar</Botao>
+                      <Botao color="danger" type="reset">Limpar</Botao>
+                      <BotaoLink to="/administrador/cadastro" color="success">Novo usuario</BotaoLink>
+                    </ButtonGroup>
+                  </Flex>
                 </CardFooter>
               </Card>
             </Form>

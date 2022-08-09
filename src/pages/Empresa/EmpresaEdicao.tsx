@@ -1,14 +1,14 @@
 import { Col, Row } from "reactstrap";
-import { Titulo } from "../../../components/Titulo";
-import { ApiBuscaDadosUmaEmpresa, ApiEdicaoEmpresa, ApiEdicaoEmpresaTypes } from "../../../utils/api";
+import { Titulo } from "../../components/Titulo";
+import { ApiBuscaDadosUmaEmpresa, ApiEdicaoEmpresa, ApiEdicaoEmpresaTypes } from "../../utils/api";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { ContainerApp } from "../../../components/ContainerApp";
-import { valoresIniciaisFormularioEmpresa } from "../../../utils/constantes";
-import { FormularioEmpresa } from "../../../components/Formularios/FormularioEmpresa";
-import { ModalSucessoCadastro, ModalErroCadastro, ModalErroDadosNaoCarregados } from "../../../components/Modals";
-import { validacaoSchemaFormularioEmpresa } from "../../../utils/ValidacaoSchemas";
-import { FormatadorDados } from "../../../utils/FormatadorDados";
+import { ContainerApp } from "../../components/ContainerApp";
+import { valoresIniciaisFormularioEmpresa } from "../../utils/constantes";
+import { FormularioEmpresa } from "../../components/Formularios/FormularioEmpresa";
+import { ModalSucessoCadastro, ModalErroCadastro, ModalErroDadosNaoCarregados } from "../../components/Modals";
+import { validacaoSchemaFormularioEmpresa } from "../../utils/ValidacaoSchemas";
+import { FormatadorDados } from "../../utils/FormatadorDados";
 
 export function EmpresaEdicao() {
   const [data, setData] = useState<EmpresaTypes>(valoresIniciaisFormularioEmpresa);

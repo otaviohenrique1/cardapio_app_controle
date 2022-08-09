@@ -1,14 +1,14 @@
 import { FormikHelpers } from "formik";
 import { Col, Row } from "reactstrap";
-import { Titulo } from "../../../components/Titulo";
-import { ContainerApp } from "../../../components/ContainerApp";
-import { FormularioEmpresa } from "../../../components/Formularios/FormularioEmpresa";
-import { valoresIniciaisFormularioEmpresa } from "../../../utils/constantes";
-import { ModalSucessoCadastro, ModalErroCadastro } from "../../../components/Modals";
-import { ApiCadastroEmpresa, ApiCadastroEmpresaTypes } from "../../../utils/api";
-import { FormatadorCrypto } from "../../../utils/FormatadorCrypto";
-import { FormatadorDados } from "../../../utils/FormatadorDados";
-import { validacaoSchemaFormularioEmpresa } from "../../../utils/ValidacaoSchemas";
+import { Titulo } from "../../components/Titulo";
+import { ContainerApp } from "../../components/ContainerApp";
+import { FormularioEmpresa } from "../../components/Formularios/FormularioEmpresa";
+import { valoresIniciaisFormularioEmpresa } from "../../utils/constantes";
+import { ModalSucessoCadastro, ModalErroCadastro } from "../../components/Modals";
+import { ApiCadastroEmpresa, ApiCadastroEmpresaTypes } from "../../utils/api";
+import { FormatadorCrypto } from "../../utils/FormatadorCrypto";
+import { FormatadorDados } from "../../utils/FormatadorDados";
+import { validacaoSchemaFormularioEmpresa } from "../../utils/ValidacaoSchemas";
 
 export function EmpresaCadastro() {
   async function handleSubmit(values: EmpresaTypes, helpers: FormikHelpers<EmpresaTypes>) {

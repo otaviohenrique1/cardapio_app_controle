@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Col, Row } from "reactstrap";
-import { Titulo } from "../../../components/Titulo";
-import { ContainerApp } from "../../../components/ContainerApp";
-import { FormularioAdministrador } from "../../../components/Formularios/FormularioAdministrador";
-import { ModalSucessoCadastro, ModalErroCadastro } from "../../../components/Modals";
-import { valoresIniciaisFormularioAdministrador } from "../../../utils/constantes";
-import { ApiBuscaDadosUmAdministrador, ApiEdicaoAdministrador } from "../../../utils/api";
-import { validacaoSchemaFormularioAdministrador } from "../../../utils/ValidacaoSchemas";
-import { FormatadorCrypto } from "../../../utils/FormatadorCrypto";
-import { FormatadorDados } from "../../../utils/FormatadorDados";
+import { Titulo } from "../../components/Titulo";
+import { ContainerApp } from "../../components/ContainerApp";
+import { FormularioAdministrador } from "../../components/Formularios/FormularioAdministrador";
+import { ModalSucessoCadastro, ModalErroCadastro } from "../../components/Modals";
+import { valoresIniciaisFormularioAdministrador } from "../../utils/constantes";
+import { ApiBuscaDadosUmAdministrador, ApiEdicaoAdministrador } from "../../utils/api";
+import { validacaoSchemaFormularioAdministrador } from "../../utils/ValidacaoSchemas";
+import { FormatadorCrypto } from "../../utils/FormatadorCrypto";
+import { FormatadorDados } from "../../utils/FormatadorDados";
 
 export function AdministradorEdicao() {
   const [data, setData] = useState<AdministradorTypes>(valoresIniciaisFormularioAdministrador);

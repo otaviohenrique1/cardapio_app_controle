@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Col, ListGroup, Row } from "reactstrap";
-import { BotaoLink } from "../../../components/Botoes/BotaoLink";
-import { ContainerApp } from "../../../components/ContainerApp";
-import { ItemListaFichaDados, ItemListaFichaDadosProps } from "../../../components/Lista/ItemListaFichaDados";
-import { ModalErroDadosNaoCarregados } from "../../../components/Modals";
-import { Titulo } from "../../../components/Titulo";
-import { ApiBuscaDadosUmAdministrador } from "../../../utils/api";
-import { valoresIniciaisAdministradorDados } from "../../../utils/constantes";
-import { FormatadorDados } from "../../../utils/FormatadorDados";
+import { BotaoLink } from "../../components/Botoes/BotaoLink";
+import { ContainerApp } from "../../components/ContainerApp";
+import { ItemListaFichaDados, ItemListaFichaDadosProps } from "../../components/Lista/ItemListaFichaDados";
+import { ModalErroDadosNaoCarregados } from "../../components/Modals";
+import { Titulo } from "../../components/Titulo";
+import { ApiBuscaDadosUmAdministrador } from "../../utils/api";
+import { valoresIniciaisAdministradorDados } from "../../utils/constantes";
+import { FormatadorDados } from "../../utils/FormatadorDados";
 
 export function AdministradorDados() {
   const [data, setData] = useState<AdministradorDadosTypes>(valoresIniciaisAdministradorDados);

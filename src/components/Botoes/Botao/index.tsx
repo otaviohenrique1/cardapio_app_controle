@@ -1,17 +1,14 @@
-import { ReactNode } from "react";
-import { Button, ButtonProps } from "reactstrap";
+import { Button, ButtonProps as ButtonPropsReactstrap } from "reactstrap";
 
-interface BotaoProps extends ButtonProps {
-  children: ReactNode;
+type ButtonProps = ButtonPropsReactstrap & {
   color: ButtonColors;
 }
 
-export function Botao(props: BotaoProps) {
-  const { color, children } = props;
+export function Botao(props: ButtonProps) {
   return (
     <Button
       {...props}
-      color={color}
-    >{children}</Button>
+      color={props.color}
+    />
   );
 }

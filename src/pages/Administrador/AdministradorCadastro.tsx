@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { Col, Container, Row } from "reactstrap";
 import { FormikHelpers } from "formik";
-import { Titulo } from "../../../components/Titulo";
-import { FormularioAdministrador } from "../../../components/Formularios/FormularioAdministrador";
-import { valoresIniciaisFormularioAdministrador } from "../../../utils/constantes";
-import { ModalSucessoCadastro, ModalErroCadastro } from "../../../components/Modals";
-import { validacaoSchemaFormularioAdministrador } from "../../../utils/ValidacaoSchemas";
-import { ApiCadastroAdministrador, ApiCadastroAdministradorTypes } from "../../../utils/api";
-import { FormatadorDados } from "../../../utils/FormatadorDados";
-import { FormatadorCrypto } from "../../../utils/FormatadorCrypto";
+import { Titulo } from "../../components/Titulo";
+import { FormularioAdministrador } from "../../components/Formularios/FormularioAdministrador";
+import { valoresIniciaisFormularioAdministrador } from "../../utils/constantes";
+import { ModalSucessoCadastro, ModalErroCadastro } from "../../components/Modals";
+import { validacaoSchemaFormularioAdministrador } from "../../utils/ValidacaoSchemas";
+import { ApiCadastroAdministrador, ApiCadastroAdministradorTypes } from "../../utils/api";
+import { FormatadorDados } from "../../utils/FormatadorDados";
+import { FormatadorCrypto } from "../../utils/FormatadorCrypto";
 
 export function AdministradorCadastro() {
   const navigate = useNavigate();

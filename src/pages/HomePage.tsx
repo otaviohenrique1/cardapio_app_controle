@@ -3,17 +3,17 @@ import { CellProps, Column, TableOptions, TableState, useGlobalFilter, usePagina
 import { Col, DropdownItem, DropdownMenu, DropdownToggle, Row, UncontrolledButtonDropdown } from "reactstrap";
 import styled from "styled-components";
 import { BsFillGearFill } from "react-icons/bs";
-import { Titulo } from "../../components/Titulo";
-import { CampoFiltroGlobalTabela } from "../../components/Filtros";
-import { ContainerApp } from "../../components/ContainerApp";
-import { ExibePaginaInicioFim } from "../../components/Paginacao/ExibePaginaInicioFim";
-import { IrParaPagina } from "../../components/Paginacao/IrParaPagina";
-import { Paginacao } from "../../components/Paginacao/Paginacao";
-import { QuantidadeItemsPorPagina } from "../../components/Paginacao/QuantidadeItemsPorPagina";
-import { BotaoLink } from "../../components/Botoes/BotaoLink";
-import { Tabela } from "../../components/Tabela";
-import { ModalErroDadosNaoCarregados } from "../../components/Modals";
-import { ApiBuscaDadosTodasEmpresas } from "../../utils/api";
+import { Titulo } from "../components/Titulo";
+import { CampoFiltroGlobalTabela } from "../components/Filtros";
+import { ContainerApp } from "../components/ContainerApp";
+import { ExibePaginaInicioFim } from "../components/Paginacao/ExibePaginaInicioFim";
+import { IrParaPagina } from "../components/Paginacao/IrParaPagina";
+import { Paginacao } from "../components/Paginacao/Paginacao";
+import { QuantidadeItemsPorPagina } from "../components/Paginacao/QuantidadeItemsPorPagina";
+import { BotaoLink } from "../components/Botoes/BotaoLink";
+import { Tabela } from "../components/Tabela";
+import { ModalErroDadosNaoCarregados } from "../components/Modals";
+import { ApiBuscaDadosTodasEmpresas } from "../utils/api";
 import { To } from "react-router-dom";
 
 export function HomePage() {

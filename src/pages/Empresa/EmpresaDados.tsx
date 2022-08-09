@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Col, ListGroup, Row } from "reactstrap";
-import { ContainerApp } from "../../../components/ContainerApp";
-import { Titulo } from "../../../components/Titulo";
-import { ItemListaFichaDados, ItemListaFichaDadosProps } from "../../../components/Lista/ItemListaFichaDados";
-import { BotaoLink } from "../../../components/Botoes/BotaoLink";
-import { ModalErroDadosNaoCarregados } from "../../../components/Modals";
-import { ApiBuscaDadosUmaEmpresa } from "../../../utils/api";
-import { FormatadorDados } from "../../../utils/utils";
-import { valoresIniciaisEmpresaDados } from "../../../utils/constantes";
+import { ContainerApp } from "../../components/ContainerApp";
+import { Titulo } from "../../components/Titulo";
+import { ItemListaFichaDados, ItemListaFichaDadosProps } from "../../components/Lista/ItemListaFichaDados";
+import { BotaoLink } from "../../components/Botoes/BotaoLink";
+import { ModalErroDadosNaoCarregados } from "../../components/Modals";
+import { ApiBuscaDadosUmaEmpresa } from "../../utils/api";
+import { FormatadorDados } from "../../utils/utils";
+import { valoresIniciaisEmpresaDados } from "../../utils/constantes";
 
 export function EmpresaDados() {
   const [data, setData] = useState<EmpresaDadosTypes>(valoresIniciaisEmpresaDados);
