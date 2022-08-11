@@ -1,16 +1,19 @@
 import { useNavigate } from "react-router-dom";
-import { Container, Row, ButtonGroup, Card, CardBody, CardHeader, CardFooter } from "reactstrap";
+import { Row, ButtonGroup, Card, CardBody, CardHeader, CardFooter } from "reactstrap";
 import { Form, Formik } from "formik";
 import { Titulo } from "../components/Titulo";
 import { CampoInput, CampoInputProps } from "../components/Campos/CampoInput";
-import { Botao } from "../components/Botoes/Botao";
-import { BotaoLink } from "../components/Botoes/BotaoLink";
 import { ModalErroCadastro } from "../components/Modals";
 import { ApiBuscaLoginAdministrador } from "../utils/api";
 import { FormatadorCrypto } from "../utils/utils";
 import { dadosIniciaisFormularioLogin } from "../utils/constantes";
 import { schemaValidacaoFormularioLogin } from "../utils/ValidacaoSchemas";
 import { Flex } from "../components/Containers/Flex";
+import { Button } from "../components/Button";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import { MdOutlineAlternateEmail, MdLockOutline } from "react-icons/md";
+import { FaGoogle, FaApple } from "react-icons/fa";
 
 export function Login() {
   let navigate = useNavigate();
@@ -44,7 +47,12 @@ export function Login() {
   }
 
   return (
-    <Container className="d-flex justify-content-center align-content-center m-5">
+    <Flex
+      justifyContent="center"
+      alignItems="center"
+      width={"100%"}
+      height={"100%"}
+    >
       <Formik
         initialValues={dadosIniciaisFormularioLogin}
         onSubmit={onSubmit}
@@ -67,7 +75,7 @@ export function Login() {
           ];
 
           return (
-            <Form>
+            <FormContainer className="d-flex flex-column">
               <Card>
                 <CardHeader>
                   <Flex
@@ -105,17 +113,25 @@ export function Login() {
                     justifyContent="center"
                   >
                     <ButtonGroup>
-                      <Botao color="primary" type="submit">Entrar</Botao>
-                      <Botao color="danger" type="reset">Limpar</Botao>
-                      <BotaoLink to="/administrador/cadastro" color="success">Novo usuario</BotaoLink>
+                      <Button color="primary" type="submit">Entrar</Button>
+                      <Button color="danger" type="reset">Limpar</Button>
+                      <Link
+                        className="btn btn-success"
+                        to="/administrador/cadastro"
+                      >Novo usuario</Link>
                     </ButtonGroup>
                   </Flex>
                 </CardFooter>
               </Card>
-            </Form>
+            </FormContainer>
           );
         }}
       </Formik>
-    </Container>
+    </Flex>
   );
 }
+
+const FormContainer = styled(Form)`
+  width: 100%;
+  max-width: 400px;
+`;
